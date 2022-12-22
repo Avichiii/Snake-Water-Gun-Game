@@ -49,8 +49,14 @@ print(f"Comoputer chose {comp}")
 print(f"You chose {you}")
 
 if c == None:
-    print("This game is a tie") 
+    print("This game is a tie")
+    with open("read.txt" , 'w') as t:
+        a = t.write("No one won") 
 elif c:
-    print("You win") 
+    print("You win")
+    with open("read.txt" , 'w') as f:
+        b = f.write("You won")
 else:
     print("You lose") 
+    with open("read.txt" , 'w') as g:
+        c = g.write("comp won")
